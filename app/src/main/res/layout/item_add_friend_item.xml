@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:id="@+id/item_add_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+
+        >
+
+        <Button
+            android:id="@+id/item_add_refuse"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_baseline_clear_24"
+            android:backgroundTint="#E91E63" />
+
+        <Space
+            android:id="@+id/item_add_space"
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/item_add_refuse" />
+
+        <Button
+            android:id="@+id/item_add_accept"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/item_add_space"
+            android:background="@drawable/ic_baseline_check_24"
+            android:backgroundTint="#4CAF50" />
+
+        <TextView
+            android:id="@+id/item_add_textview"
+            android:layout_alignParentLeft="true"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:text="TextView"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:fontFamily="@font/bamboo"
+            android:layout_toLeftOf="@id/item_add_accept"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

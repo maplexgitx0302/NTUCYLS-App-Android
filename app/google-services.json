@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "939471121204",
+    "firebase_url": "https://ntucylsapp.firebaseio.com",
+    "project_id": "ntucylsapp",
+    "storage_bucket": "ntucylsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939471121204:android:bec6d0a7939a8ab4415361",
+        "android_client_info": {
+          "package_name": "com.example.ntucylsandroidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939471121204-lf240vgjkl0im2vrj39hd94ils3c3mph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAuq6CVRFHErpc4qaYqQxf7vry3XytQwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939471121204-lf240vgjkl0im2vrj39hd94ils3c3mph.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "939471121204-4l21oudoetiod0ba7ho8ol1nd63cuif8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.YianChen.ntucylsapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

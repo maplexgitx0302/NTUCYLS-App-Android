@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#003366"
+    android:id="@+id/registerview"
     tools:context=".RegisterActivity">
 
     <EditText
@@ -48,7 +48,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:background="#004C99"
         android:fontFamily="@font/sonti"
         android:lineSpacingExtra="5sp"
         android:scrollbars="vertical"

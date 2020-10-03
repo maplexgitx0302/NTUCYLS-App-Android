@@ -6,86 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <Button
-        android:id="@+id/button_br"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mingchinRecycleView"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/button_bm"
-        app:layout_constraintTop_toBottomOf="@+id/button_mr" />
-
-    <Button
-        android:id="@+id/button_bl"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
-        app:layout_constraintEnd_toStartOf="@id/button_bm"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_ml"
-        tools:layout_constraintTop_toBottomOf="@id/button_ml" />
-
-    <Button
-        android:id="@+id/button_bm"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
-        app:layout_constraintEnd_toStartOf="@id/button_br"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/button_bl"
-        app:layout_constraintTop_toBottomOf="@+id/button_mm" />
-
-    <Button
-        android:id="@+id/button_personal_info"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="150dp"
-        android:text="@string/personal_info"
-        app:layout_constraintEnd_toStartOf="@+id/button_theme_colors"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_mm"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
-        app:layout_constraintEnd_toStartOf="@+id/button_mr"
-        app:layout_constraintStart_toEndOf="@+id/button_ml"
-        app:layout_constraintTop_toBottomOf="@+id/button_theme_colors" />
-
-    <Button
-        android:id="@+id/button_ml"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
-        app:layout_constraintEnd_toStartOf="@id/button_mm"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_personal_info" />
-
-    <Button
-        android:id="@+id/button_mr"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_mm"
-        app:layout_constraintTop_toBottomOf="@+id/button_logout" />
-
-    <Button
-        android:id="@+id/button_theme_colors"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="150dp"
-        android:text="@string/theme_colors"
-        app:layout_constraintEnd_toStartOf="@+id/button_logout"
-        app:layout_constraintStart_toEndOf="@+id/button_personal_info"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_logout"
-        android:layout_width="0dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="150dp"
-        android:text="@string/logout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_theme_colors"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_home_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>

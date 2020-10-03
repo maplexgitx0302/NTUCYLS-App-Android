@@ -6,17 +6,120 @@
     android:layout_height="match_parent"
     tools:context=".ui.setting.SettingFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <Button
+        android:id="@+id/button_br"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/sonti"
+        android:gravity="bottom|center"
+        android:text="關於APP"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/button_bm"
+        app:layout_constraintTop_toBottomOf="@+id/button_mr" />
+
+    <Button
+        android:id="@+id/button_bl"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/sonti"
+        android:gravity="bottom|center"
+        android:text="鄉服常識"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/button_bm"
+        app:layout_constraintTop_toBottomOf="@+id/button_ml"
+        tools:layout_constraintTop_toBottomOf="@id/button_ml" />
+
+    <Button
+        android:id="@+id/button_bm"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/sonti"
+        android:gravity="bottom|center"
+        android:text="鄉服八卦"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/button_mm"
+        app:layout_constraintStart_toStartOf="@+id/button_mm"
+        app:layout_constraintTop_toBottomOf="@+id/button_mm" />
+
+    <Button
+        android:id="@+id/button_personal_info"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/sonti"
+        android:gravity="bottom|center"
+        android:text="@string/personal_info"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button_ml"
+        app:layout_constraintEnd_toStartOf="@+id/button_theme_colors" />
+
+    <Button
+        android:id="@+id/button_mm"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:background="@drawable/cyls_icon"
+        android:gravity="bottom|center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_ml"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="2dp"
+        android:fontFamily="@font/sonti"
+        android:gravity="bottom|center"
+        android:text="鄉服秘密"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/button_mm"
+        app:layout_constraintEnd_toStartOf="@+id/button_mm"
+        app:layout_constraintTop_toTopOf="@+id/button_mm" />
+
+    <Button
+        android:id="@+id/button_mr"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/sonti"
+        android:gravity="bottom|center"
+        android:text="鄉服秘辛"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/button_mm"
+        app:layout_constraintStart_toEndOf="@+id/button_mm"
+        app:layout_constraintTop_toTopOf="@+id/button_mm" />
+
+    <Button
+        android:id="@+id/button_theme_colors"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/sonti"
+        android:gravity="bottom|center"
+        android:text="@string/theme_colors"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button_mm"
+        app:layout_constraintEnd_toEndOf="@+id/button_mm"
+        app:layout_constraintStart_toStartOf="@+id/button_mm" />
+
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/sonti"
+        android:gravity="bottom|center"
+        android:text="@string/logout"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button_mr"
+        app:layout_constraintStart_toEndOf="@+id/button_theme_colors" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

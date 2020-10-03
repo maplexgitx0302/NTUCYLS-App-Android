@@ -23,18 +23,23 @@
     <fragment
         android:id="@+id/navigation_setting"
         android:name="com.example.ntucylsandroidapp.ui.setting.SettingFragment"
-        android:label="@string/title_friends"
-        tools:layout="@layout/fragment_setting"></fragment>
+        android:label="@string/title_setting"
+        tools:layout="@layout/fragment_setting"/>
 
 
     <fragment
         android:id="@+id/navigation_friends"
         android:name="com.example.ntucylsandroidapp.ui.friend.FriendsFragment"
-        android:label="@string/title_setting"
+        android:label="@string/title_friends"
         tools:layout="@layout/fragment_friends" />
     <fragment
         android:id="@+id/theme_color"
         android:name="com.example.ntucylsandroidapp.ui.themecolors.Theme_color"
-        android:label="theme_color_fragment"
+        android:label="@string/theme_colors"
         tools:layout="@layout/theme_color_fragment" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.ntucylsandroidapp.ui.setting.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

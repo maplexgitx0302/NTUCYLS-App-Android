@@ -20,7 +20,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_add_friend.*
 import kotlinx.android.synthetic.main.item_add_friend_item.view.*
 
-data class RecyclerClass(val selfID: String, val friendID: String)
+data class RecyclerClass(val selfID: String, val friendID: String, val friendName: String)
 
 val db = Firebase.firestore
 
@@ -28,6 +28,13 @@ class AddFriendActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_friend)
+        supportActionBar?.hide()
+
+        val shareColorPreference = getSharedPreferences("Color", MODE_PRIVATE)
+        val defaultcolor = shareColorPreference.getInt("darkcolor", resources.getColor(R.color.dark_blue))
+        val lightcolor = shareColorPreference.getInt("lightcolor", resources.getColor(R.color.light_blue))
+        add_friend_view.setBackgroundColor(defaultcolor)
+        window.statusBarColor = lightcolor
 
         val list = ArrayList<RecyclerClass>()
         val sharePreference = getSharedPreferences("Profile", Context.MODE_PRIVATE)
@@ -39,8 +46,9 @@ class AddFriendActivity : AppCompatActivity() {
                 Log.d("invitation", "DocumentSnapshot data: ${document.data}")
                 val invitationKeys = document.data!!.keys
                 for (i in 0 until document.data!!.count()) {
-                    val item = RecyclerClass(account!!, invitationKeys.elementAt(i))
-
+                    val item = RecyclerClass(account!!, invitationKeys.elementAt(i),
+                        document.data!![invitationKeys.elementAt(i)].toString()
+                    )
                     list += item
                 }
 
@@ -115,7 +123,7 @@ class AddFriendActivity : AppCompatActivity() {
     }// override end
 }
 
-class RecyclerAdapter(private  val recyclerList: List<RecyclerClass>) : RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder>() {
+class RecyclerAdapter(private val recyclerList: ArrayList<RecyclerClass>) : RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_add_friend_item,
@@ -128,7 +136,7 @@ class RecyclerAdapter(private  val recyclerList: List<RecyclerClass>) : Recycler
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         val currentItem = recyclerList[position]
-        holder.friendAccount.text = currentItem.friendID
+        holder.friendAccount.text = currentItem.friendID+"  "+currentItem.friendName
         holder.acceptBut.setOnClickListener {
             if(holder.acceptBut.alpha != 0F){
                 holder.acceptBut.alpha = 0F

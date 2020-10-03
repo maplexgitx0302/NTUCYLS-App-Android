@@ -1,6 +1,7 @@
 package com.example.ntucylsandroidapp
 
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
@@ -20,6 +21,14 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
+        supportActionBar?.hide()
+
+        val sharePreference = getSharedPreferences("Color", MODE_PRIVATE)
+        val defaultcolor = sharePreference.getInt("darkcolor", resources.getColor(R.color.dark_blue))
+        val lightcolor = sharePreference.getInt("lightcolor", resources.getColor(R.color.light_blue))
+        registerview.setBackgroundColor(defaultcolor)
+        window.statusBarColor = lightcolor
 
         //firebase auth
         auth = Firebase.auth
